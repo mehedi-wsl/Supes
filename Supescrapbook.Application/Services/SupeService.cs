@@ -1,4 +1,4 @@
-﻿using Superscrapbook.Application.Repositories;
+﻿using SupeScrapbook.Application.Repositories;
 using SupesScrapbook.Domain.Entities;
 
 namespace Supescrapbook.Application.Services

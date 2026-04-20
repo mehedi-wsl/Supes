@@ -1,6 +1,6 @@
 using SupesScrapbook.Domain.Entities;
 
-namespace Superscrapbook.Application.Repositories;
+namespace SupeScrapbook.Application.Repositories;
 
 public interface ISupeRepository
 

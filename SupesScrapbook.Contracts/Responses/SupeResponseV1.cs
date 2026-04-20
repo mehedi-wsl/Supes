@@ -17,8 +17,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Org.OpenAPITools.Converters;
+using SupesScrapbook.Contracts.Models;
 
-namespace Org.OpenAPITools.Models
+namespace SupesScrapbook.Contracts.Responses
 { 
     /// <summary>
     /// 
@@ -77,11 +78,11 @@ namespace Org.OpenAPITools.Models
             if (ReferenceEquals(this, other)) return true;
 
             return 
-                (
+                
                     Data == other.Data ||
                     Data != null &&
                     Data.Equals(other.Data)
-                );
+                ;
         }
 
         /// <summary>

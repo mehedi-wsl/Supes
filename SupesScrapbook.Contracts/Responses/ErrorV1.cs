@@ -18,7 +18,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Org.OpenAPITools.Converters;
 
-namespace Org.OpenAPITools.Models
+namespace SupesScrapbook.Contracts.Responses
 { 
     /// <summary>
     /// 
@@ -94,11 +94,11 @@ namespace Org.OpenAPITools.Models
             if (ReferenceEquals(this, other)) return true;
 
             return 
-                (
+                
                     ErrorCode == other.ErrorCode ||
                     
                     ErrorCode.Equals(other.ErrorCode)
-                );
+                ;
         }
 
         /// <summary>

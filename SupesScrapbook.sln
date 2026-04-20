@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supescrapbook.API", "Supescrapbook.API\Supescrapbook.API.csproj", "{D59C9625-5596-4CA9-B450-DF854DAC8C12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supescrapbook.Application", "Supescrapbook.Application\Supescrapbook.Application.csproj", "{EC759E2C-CE79-44A9-95F6-07D6EE9AB449}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupeScrapbook.Application", "Supescrapbook.Application\SupeScrapbook.Application.csproj", "{EC759E2C-CE79-44A9-95F6-07D6EE9AB449}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupesScrapbook.Infrastructure", "SupesScrapbook.Infrastructure\SupesScrapbook.Infrastructure.csproj", "{7AD5B9EC-2A8D-48D5-A063-9D334F627CAD}"
 EndProject

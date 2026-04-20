@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Supescrapbook.Application\Supescrapbook.Application.csproj" />
+    <ProjectReference Include="..\Supescrapbook.Application\SupeScrapbook.Application.csproj" />
   </ItemGroup>
 
 </Project>
