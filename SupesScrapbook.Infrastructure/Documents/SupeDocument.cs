@@ -1,13 +1,16 @@
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
 namespace SupesScrapbook.Infrastructure.Documents;
 
 public class SupeDocument
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public string Id { get; set; }
+    public string _Id { get; set; }
 
     [BsonElement("id")]
-    public int HeroId { get; set; }
+    public int Id { get; set; }
 
     [BsonElement("name")]
     public string Name { get; set; }

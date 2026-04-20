@@ -1,6 +1,12 @@
-namespace Supescrapbook.Application.DependencyInjection;
+namespace Supescrapbook.Application;
+using Microsoft.Extensions.DependencyInjection;
+using Supescrapbook.Application.Services;
 
-public class DependencyInjection
+public static class DependencyInjection
 {
-    public static IS 
+    public static IServiceCollection AddApplication(this IServiceCollection services)
+    {
+        services.AddScoped<ISupeService, SupeService>();
+        return services;
+    }
 }
