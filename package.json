@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "generate": "openapi-generator-cli generate -i openapi-supes.yml -g aspnetcore -o src/",
+    "tidy": "bash Scripts/move.sh",
+    "generate:all": "npm run generate && npm run tidy"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.13.4"
+  }
+}

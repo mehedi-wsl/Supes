@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupesScrapbook.Infrastructu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupesScrapbook.Domain", "SupesScrapbook.Domain\SupesScrapbook.Domain.csproj", "{7AE33AD5-B913-4699-8795-84092D4F3FF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupesScrapbook.Contracts", "SupesScrapbook.Contracts\SupesScrapbook.Contracts.csproj", "{75753E11-2A3B-43FB-964A-71BDF73D56E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7AE33AD5-B913-4699-8795-84092D4F3FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AE33AD5-B913-4699-8795-84092D4F3FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AE33AD5-B913-4699-8795-84092D4F3FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75753E11-2A3B-43FB-964A-71BDF73D56E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75753E11-2A3B-43FB-964A-71BDF73D56E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75753E11-2A3B-43FB-964A-71BDF73D56E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75753E11-2A3B-43FB-964A-71BDF73D56E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

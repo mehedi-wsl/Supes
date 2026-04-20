@@ -1,0 +1,227 @@
+openapi: 3.0.0
+x-amazon-apigateway-importexport-version: 1.0
+info:
+  title: SupeScrapbook
+  version: 0.1.0
+  description: The API for the SupeScrapbook
+
+paths:
+  # Version 1 Paths
+  /api/v1/supes:
+    get:
+      summary: 'Returns data for ALL supes'
+      operationId: getSupes
+      tags:
+        - Supes
+      responses:
+        '200':
+          description: 'Successful request, supes found'
+          headers:
+            etag:
+              description: Resource identifier to indicate resource change
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SupesResponseV1'
+        # ADD FURTHER RESPONSE TYPES + schema '$ref' link
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /api/v1/supes/{id}:
+    get:
+      summary: 'Returns data for a single supe based on the provided id'
+      operationId: getSupeById
+      tags:
+        - Supes
+      parameters:
+        - name: id
+          in: path
+          description: The unique identifier of the supe to retrieve
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 'Successful request, supe found'
+          headers:
+            etag:
+              description: Resource identifier to indicate resource change
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SupeResponseV1'
+        # ADD FURTHER RESPONSE TYPES + schema '$ref' link
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+components:
+  responses:
+    # ADD ERROR RESPONSE SCHEMAS (+ update ErrorV1 enum for each addition)
+    InternalServerError:
+      description: 'Unexpected error on the server'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorV1'
+
+  schemas:
+    SupesResponseV1:
+      type: array
+      items:
+        $ref: '#/components/schemas/SupeResponseV1'
+
+    SupeResponseV1:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/Supe'
+    Supe:
+      type: object 
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: number
+          example: 1
+        name:
+          type: string
+          example: "A-Bomb"
+        slug:
+          type: string
+          example: "1-a-bomb"
+        powerstats:
+          $ref: '#/components/schemas/Powerstats'
+        appearance:
+          $ref: '#/components/schemas/Appearance'
+        biography:
+          $ref: '#/components/schemas/Biography'
+        work:
+          $ref: '#/components/schemas/Work'
+        connections:
+          $ref: '#/components/schemas/Connections'
+        images:
+          $ref: '#/components/schemas/Images'
+    Appearance:
+      type: object
+      properties:
+        gender:
+          type: string
+          example: "Male"
+        race:
+          type: string
+          example: "Human"
+        height:
+          type: array
+          items:
+            type: string
+          example: ["6'8", "203cm"]
+        weight:
+          type: array
+          items:
+            type: string
+          example: ["980 lb", "441 kg"]
+        eyeColor:
+          type: string
+          example: "Yellow"
+        hairColor:
+          type: string
+          example: "No Hair"
+
+    Biography:
+      type: object
+      properties:
+        fullName:
+          type: string
+          example: "Richard Milhouse Jones"
+        alterEgos:
+          type: string
+          example: "No alter egos found."
+        aliases:
+          type: array
+          items:
+            type: string
+          example: ["Rick Jones"]
+        placeOfBirth:
+          type: string
+          example: "Scarsdale, Arizona"
+        firstAppearance:
+          type: string
+          example: "Hulk Vol 2 #2 (April, 2008) (as A-Bomb)"
+        publisher:
+          type: string
+          example: "Marvel Comics"
+        alignment:
+          type: string
+          example: "good"
+
+    Work:
+      type: object
+      properties:
+        occupation:
+          type: string
+          example: "Musician, adventurer"
+        base:
+          type: string
+          example: "-"
+
+    Connections:
+      type: object
+      properties:
+        groupAffiliation:
+          type: string
+          example: "Hulk Family; Avengers (honorary member)"
+        relatives:
+          type: string
+          example: "Marlo Chandler-Jones (wife)"
+
+    Images:
+      type: object
+      properties:
+        xs:
+          type: string
+          example: "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/xs/1-a-bomb.jpg"
+        sm:
+          type: string
+          example: "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/1-a-bomb.jpg"
+        md:
+          type: string
+          example: "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+        lg:
+          type: string
+          example: "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/1-a-bomb.jpg"
+
+    Powerstats:
+      type: object
+      properties:
+        intelligence:
+          type: number
+          example: 38
+        strength:
+          type: number
+          example: 100
+        speed:
+          type: string
+          example: 17
+        durability:
+          type: number
+          example: 80
+        power:
+          type: number
+          example: 24
+        combat:
+          type: number
+          example: 64
+          
+    ErrorV1:
+      type: object
+      required:
+        - errorCode
+      properties:
+        errorCode:
+          type: string
+          enum:
+            - InternalError
