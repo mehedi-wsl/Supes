@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
-using SupeScrapbook.Application.Repositories;
+using SupesScrapbook.Application.Repositories;
 using SupesScrapbook.Infrastructure.Repositories;
 
 namespace SupesScrapbook.Infrastructure;

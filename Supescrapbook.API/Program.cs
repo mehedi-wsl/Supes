@@ -1,5 +1,5 @@
-using Supescrapbook.API.Server;
-using Supescrapbook.Application;
+using SupesScrapbook.API.Server;
+using SupesScrapbook.Application;
 using SupesScrapbook.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;

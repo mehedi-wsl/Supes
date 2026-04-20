@@ -1,5 +1,5 @@
 using MongoDB.Driver;
-using SupeScrapbook.Application.Repositories;
+using SupesScrapbook.Application.Repositories;
 using SupesScrapbook.Domain.Entities;
 using SupesScrapbook.Infrastructure.Documents;
 using SupesScrapbook.Infrastructure.Mapper;

@@ -1,6 +1,6 @@
-using Supescrapbook.Application.Services;
+using SupesScrapbook.Application.Services;
 
-namespace Supescrapbook.API.Server;
+namespace SupesScrapbook.API.Server;
 public static class SuperHeroRouter
 {
     public static void MapSuperHeroRoutes(this RouteGroupBuilder group)

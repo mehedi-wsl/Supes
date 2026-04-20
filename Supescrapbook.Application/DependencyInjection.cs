@@ -1,6 +1,6 @@
-namespace Supescrapbook.Application;
+namespace SupesScrapbook.Application;
 using Microsoft.Extensions.DependencyInjection;
-using Supescrapbook.Application.Services;
+using SupesScrapbook.Application.Services;
 
 public static class DependencyInjection
 {

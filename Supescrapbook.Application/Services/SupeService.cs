@@ -1,7 +1,7 @@
-﻿using SupeScrapbook.Application.Repositories;
+﻿using SupesScrapbook.Application.Repositories;
 using SupesScrapbook.Domain.Entities;
 
-namespace Supescrapbook.Application.Services
+namespace SupesScrapbook.Application.Services
 {
     public class SupeService : ISupeService
     {
