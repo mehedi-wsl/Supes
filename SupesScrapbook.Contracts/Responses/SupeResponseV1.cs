@@ -15,11 +15,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using Newtonsoft.Json;
-using Org.OpenAPITools.Converters;
-using SupesScrapbook.Contracts.Models;
+using System.Text.Json;
 
-namespace SupesScrapbook.Contracts.Responses
+
+namespace SupesScrapbook.Contracts.Models
 { 
     /// <summary>
     /// 
@@ -52,7 +51,12 @@ namespace SupesScrapbook.Contracts.Responses
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+
+            return JsonSerializer.Serialize(this, options);
         }
 
         /// <summary>
@@ -78,11 +82,11 @@ namespace SupesScrapbook.Contracts.Responses
             if (ReferenceEquals(this, other)) return true;
 
             return 
-                
+                (
                     Data == other.Data ||
                     Data != null &&
                     Data.Equals(other.Data)
-                ;
+                );
         }
 
         /// <summary>

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "generate": "openapi-generator-cli generate -i openapi-supes.yml -g aspnetcore -o src/",
+    "generate": "openapi-generator-cli generate -i openapi-supes.yml -g aspnetcore -o src/ --additional-properties=packageName=SupesScrapbook.Contracts,useNewtonsoft=false",
     "tidy": "bash Scripts/move.sh",
     "generate:all": "npm run generate && npm run tidy"
   },

@@ -1,5 +1,5 @@
-﻿using SupesScrapbook.Application.Repositories;
-using SupesScrapbook.Domain.Entities;
+﻿using SupesScrapbook.Infrastructure.Documents;
+using SupesScrapbook.Infrastructure.Repositories;
 
 namespace SupesScrapbook.Application.Services
 {
@@ -10,7 +10,7 @@ namespace SupesScrapbook.Application.Services
         {
             _supeRepository = supeRepository;
         }
-        public async Task<Supe?> GetSupeById(int id)
+        public async Task<SupeDocument> GetSupeById(int id)
         {
             return await _supeRepository.GetSupesById(id);
         }

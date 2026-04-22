@@ -13,8 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Supescrapbook.Application\SupesScrapbook.Application.csproj" />
-    <ProjectReference Include="..\SupesScrapbook.Domain\SupesScrapbook.Domain.csproj" />
-    <ProjectReference Include="..\SupesScrapbook.Infrastructure\SupesScrapbook.Infrastructure.csproj" />
+    <ProjectReference Include="..\SupesScrapbook.Contracts\SupesScrapbook.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

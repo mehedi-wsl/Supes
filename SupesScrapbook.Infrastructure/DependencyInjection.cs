@@ -1,12 +1,11 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
-using SupesScrapbook.Application.Repositories;
 using SupesScrapbook.Infrastructure.Repositories;
 
 namespace SupesScrapbook.Infrastructure;
 
-public static class DepedencyInjection 
+public static class DepedencyInjection
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection serviceProvider, IConfiguration configuration)
     {

@@ -11,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SupesScrapbook.Domain\SupesScrapbook.Domain.csproj" />
+    <ProjectReference Include="..\SupesScrapbook.Contracts\SupesScrapbook.Contracts.csproj" />
+    <ProjectReference Include="..\SupesScrapbook.Infrastructure\SupesScrapbook.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -15,10 +15,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using Newtonsoft.Json;
-using Org.OpenAPITools.Converters;
+using System.Text.Json;
 
-namespace SupesScrapbook.Contracts.Responses
+
+namespace SupesScrapbook.Contracts.Models
 { 
     /// <summary>
     /// 
@@ -30,8 +30,7 @@ namespace SupesScrapbook.Contracts.Responses
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
-        [TypeConverter(typeof(CustomEnumConverter<ErrorCodeEnum>))]
-        [JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
+        
         public enum ErrorCodeEnum
         {
             
@@ -68,7 +67,12 @@ namespace SupesScrapbook.Contracts.Responses
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+
+            return JsonSerializer.Serialize(this, options);
         }
 
         /// <summary>
@@ -94,11 +98,11 @@ namespace SupesScrapbook.Contracts.Responses
             if (ReferenceEquals(this, other)) return true;
 
             return 
-                
+                (
                     ErrorCode == other.ErrorCode ||
                     
                     ErrorCode.Equals(other.ErrorCode)
-                ;
+                );
         }
 
         /// <summary>

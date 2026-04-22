@@ -15,8 +15,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
-using Newtonsoft.Json;
-using Org.OpenAPITools.Converters;
+using System.Text.Json;
+
 
 namespace SupesScrapbook.Contracts.Models
 { 
@@ -76,7 +76,12 @@ namespace SupesScrapbook.Contracts.Models
         /// <returns>JSON string presentation of the object</returns>
         public string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+
+            return JsonSerializer.Serialize(this, options);
         }
 
         /// <summary>
